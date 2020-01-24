@@ -1,9 +1,13 @@
-<div class="jumbotron jumbotron-landing">
-  <h1 class="display-4">Share you emotions</h1>
-  <p class="lead">Post your photos and follow friends</p>
-  <hr class="my-4">
-  <p class="lead">
-    <a class="btn btn-success" href="#" role="button">Sign In</a>
-    <a class="btn btn-primary" href="#" role="button">Register</a>
-  </p>
-</div>
+<% if !user_signed_in? %>
+  <div class="jumbotron jumbotron-landing">
+    <h1 class="display-4">Share you emotions</h1>
+    <p class="lead">Post your photos and follow friends</p>
+    <hr class="my-4">
+    <p class="lead">
+      <%= link_to 'Sign In', authenticate_path, class: "btn btn-success" %>
+      <%= link_to 'Registration', registration_path, class: "btn btn-primary" %>
+    </p>
+  </div>
+<% else %>
+
+<% end %>
