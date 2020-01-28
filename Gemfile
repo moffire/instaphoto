@@ -11,8 +11,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
-
 gem 'devise'
+gem 'jquery-rails'
 
 group :development do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

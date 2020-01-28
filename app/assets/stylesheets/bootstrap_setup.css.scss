@@ -2,6 +2,27 @@ $display4-size: 2.5rem;
 $jumbotron-bg: rgba(255,255,255, 0.2) ;
 @import "bootstrap";
 
+.devise-form{
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.devise-links{
+  a{
+    color: lightblue;
+  }
+}
+
+.button-form{
+  margin-top: 10px;
+}
+
+.container-login {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .container-background {
   width: 100%;
   height: 100vh;
@@ -23,3 +44,4 @@ $jumbotron-bg: rgba(255,255,255, 0.2) ;
 .nav-landing:active, {
   color: black;
 }
+
