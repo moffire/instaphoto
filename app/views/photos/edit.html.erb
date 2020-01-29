@@ -1,0 +1,12 @@
+<div class="card text-white bg-secondary mb-3 devise-form">
+  <div class="card-header">
+    <h2>Editing Photo</h2>
+  </div>
+  <div class="card-body">
+
+    <%= render 'form', photo: @photo %>
+
+    <%= link_to 'Show', @photo %> |
+    <%= link_to 'Back', photos_path %>
+  </div>
+</div>
