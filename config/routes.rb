@@ -15,7 +15,10 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'authenticate' => 'devise/sessions#new'
     get 'registration' => 'devise/registrations#new'
+    post 'registration' => 'devise/registrations#create'
+    put 'registration' => 'devise/registrations#update'
     delete 'sign_out' => 'devise/sessions#destroy'
+    get 'sign_in' => 'devise/sessions#new'
   end
 
 end
