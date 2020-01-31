@@ -1,6 +1,26 @@
 $display4-size: 2.5rem;
-$jumbotron-bg: rgba(255,255,255, 0.2) ;
+$jumbotron-bg: rgba(255,255,255, 0.2);
+$body-bg: #d3d3d3;
 @import "bootstrap";
+
+
+img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
+
+.card-body{
+  a{
+    color: #f48e36e6;
+  }
+}
+
+.full-image-form{
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .devise-form{
   width: 50%;
@@ -10,7 +30,7 @@ $jumbotron-bg: rgba(255,255,255, 0.2) ;
 
 .devise-links{
   a{
-    color: lightblue;
+    color: #f48e36e6;
   }
 }
 
@@ -21,13 +41,6 @@ $jumbotron-bg: rgba(255,255,255, 0.2) ;
 .container-login {
   padding-right: 0;
   padding-left: 0;
-}
-
-.container-background {
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-image: url(image_path('background.jpg'));
 }
 
 .jumbotron-landing {
