@@ -4,13 +4,16 @@
   </div>
   <div class="card-body">
     <p>
+      <%= image_tag @photo.image.url %>
       <strong>Info: </strong><%= @photo.description %>
       <br>
       <strong>Owner: </strong><%= @photo.user.email %>
     </p>
     <%= link_to 'Back', photos_path %>
+
     <% if @photo.user == current_user %> |
       <%= link_to 'Edit', edit_photo_path(@photo) %>
     <% end %>
+
   </div>
 </div>

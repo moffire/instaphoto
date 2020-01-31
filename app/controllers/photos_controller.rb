@@ -46,7 +46,7 @@ class PhotosController < ApplicationController
     end
 
     def photo_params
-        params.require(:photo).permit(:description)
+        params.require(:photo).permit(:description, :image)
     end
 
     #check if the User is owner of current photo
