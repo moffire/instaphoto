@@ -1,8 +1,7 @@
 $display4-size: 2.5rem;
-$jumbotron-bg: rgba(255,255,255, 0.2);
+$jumbotron-bg: rgba(255, 255, 255, 0.2);
 $body-bg: #d3d3d3;
 @import "bootstrap";
-
 
 img {
   display: inline-block;
@@ -10,31 +9,31 @@ img {
   max-width: 100%;
 }
 
-.card-body{
-  a{
+.card-body {
+  a {
     color: #f48e36e6;
   }
 }
 
-.full-image-form{
+.full-image-form {
   display: inline-block;
   margin-right: auto;
   margin-left: auto;
 }
 
-.devise-form{
+.devise-form {
   width: 50%;
   margin-right: auto;
   margin-left: auto;
 }
 
-.devise-links{
-  a{
+.devise-links {
+  a {
     color: #f48e36e6;
   }
 }
 
-.button-form{
+.button-form {
   margin-top: 10px;
 }
 
@@ -53,6 +52,7 @@ img {
 .nav-landing:visited, {
   color: black;
 }
+
 .nav-landing:hover,
 .nav-landing:active, {
   color: black;

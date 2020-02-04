@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   #root_path
   root 'pages#landing'
 
-  #header
-  get 'about' => 'pages#about'
+  #user_profile
+  get '/profiles/:id' => 'profiles#show', as: 'profile'
 
   #registration/authentication
   devise_for :users
