@@ -12,8 +12,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
-gem "paperclip", "~> 5.0.0"
+gem 'paperclip', '~> 5.0.0'
 gem 'jquery-rails'
+gem 'aws-sdk', '~> 2.5'
 
 group :development do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
