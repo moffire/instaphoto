@@ -1,18 +1,29 @@
-<%= @user.id %><br>
-<%= @user.email %>
-<br>
-<div class="card-deck">
-  <% @user.photos.each do |photo| %>
-    <div class="card text-white bg-secondary mb-3">
-      <%= link_to (image_tag photo.image.url(:medium)), photo %>
-      <div class="card-body">
-        <h5 class="card-title"><%= photo.description %></h5>
-        <%= link_to 'Show', photo %>
-        <% if @user == current_user %> |
-          <%= link_to 'Edit', edit_photo_path(photo) %> |
-          <%= link_to 'Destroy', photo, method: :delete, data: {confirm: 'Are you sure?'} %>
-        <% end %>
-      </div>
+<div class="album">
+  <div class="container">
+    <%= @user.email %><br>
+    <% if current_user.id != @user.id %>
+      <% if current_user.subscriptions.exists?(friend_id: @user.id) %>
+        <%= link_to 'Unsubscribe', unsubscribe_profile_path(@user) %>
+      <% else %>
+        <%= link_to 'Subscribe', subscribe_profile_path(@user) %>
+      <% end %>
+    <% end %>
+    <div class="row">
+      <% @user.photos.each do |photo| %>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <%= link_to (image_tag photo.image.url(:medium)), photo %>
+            <div class="card-body">
+              <h5 class="card-title"><%= photo.description %></h5>
+              <%= link_to 'Show', photo %>
+              <% if @user == current_user %> |
+                <%= link_to 'Edit', edit_photo_path(photo) %> |
+                <%= link_to 'Destroy', photo, method: :delete, data: {confirm: 'Are you sure?'} %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>

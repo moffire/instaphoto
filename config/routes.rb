@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   #user_profile
   get '/profiles/:id' => 'profiles#show', as: 'profile'
+  get '/profiles/:id/subscribe' => 'profiles#subscribe', as: 'subscribe_profile'
+  get '/profiles/:id/unsubscribe' => 'profiles#unsubscribe', as: 'unsubscribe_profile'
+
 
   #registration/authentication
   devise_for :users
