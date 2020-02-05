@@ -1,0 +1,24 @@
+<div class="album">
+  <div class="container">
+    <div class="row">
+      <% @photos.each do |photo| %>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <%= link_to (image_tag photo.image.url(:medium)), photo %>
+            <div class="card-body">
+              <h5 class="card-title"><%= photo.description %></h5>
+              <%= link_to 'Show', photo %>
+              <% if photo.user == current_user %> |
+                <%= link_to 'Edit', edit_photo_path(photo) %> |
+                <%= link_to 'Destroy', photo, method: :delete, data: {confirm: 'Are you sure?'} %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <% if user_signed_in? %>
+      <%= link_to 'New Photo', new_photo_path, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
