@@ -1,6 +1,6 @@
 <div class="album">
   <div class="container">
-    <%= @user.email %><br>
+    <%= @user.name %><br>
     <% if current_user.id != @user.id %>
       <% if current_user.subscriptions.exists?(friend_id: @user.id) %>
         <%= link_to 'Unsubscribe', unsubscribe_profile_path(@user) %>

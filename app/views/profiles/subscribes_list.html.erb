@@ -2,6 +2,7 @@
   <thead>
   <tr>
     <th scope="col">#</th>
+    <th scope="col">User Name</th>
     <th scope="col">User Email</th>
     <th scope="col">Action</th>
   </tr>
@@ -10,6 +11,7 @@
   <% @friends.each_with_index do |friend, index| %>
     <tr>
       <th scope="row"><%= index + 1 %></th>
+      <td><%= link_to friend.name, profile_path(friend) %></td>
       <td><%= link_to friend.email, profile_path(friend) %></td>
       <td><%= link_to 'Unsubscribe', unsubscribe_profile_path(friend) %></td>
     </tr>
