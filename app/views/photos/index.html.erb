@@ -11,13 +11,18 @@
               <%= link_to 'Show', photo %>
               <% if photo.user == current_user %> |
                 <%= link_to 'Edit', edit_photo_path(photo) %> |
-                <%= link_to 'Destroy', photo, method: :delete, data: {confirm: 'Are you sure?'} %>
+                <%= link_to 'Delete', photo, method: :delete, data: {confirm: 'Are you sure?'} %>
               <% end %>
             </div>
           </div>
         </div>
       <% end %>
     </div>
+
+<!--    pagination-->
+    <%= render 'pagination' %>
+
+<!--    check if user signed in-->
     <% if user_signed_in? %>
       <%= link_to 'New Photo', new_photo_path, class: "btn btn-primary" %>
     <% end %>
