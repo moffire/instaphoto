@@ -83,7 +83,16 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  config.action_mailer.default_url_options = { host: 'https://instaphoto-moffire.herokuapp.com/', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'instaphoto-moffire.herokuapp.com/', port: 3000 }
+
+  config.action_mailer.smtp_settings = {
+      address:              'smtp.gmail.com',
+      port:                 587,
+      domain:               'instaphoto-moffire.herokuapp.com',
+      user_name:            ENV.fetch('MAIL_ACCOUNT_NAME'),
+      password:             ENV.fetch('MAIL_ACCOUNT_PASSWORD'),
+      authentication:       'plain',
+      enable_starttls_auto: true }
 
   config.paperclip_defaults = {
       storage: :s3,
