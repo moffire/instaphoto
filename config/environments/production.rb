@@ -88,10 +88,11 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
       address:              'smtp.yandex.ru',
       port:                 587,
-      domain:               'instaphoto-moffire.herokuapp.com',
+      domain:               'yandex.ru',
       user_name:            ENV.fetch('LOGIN_EMAIL'),
       password:             ENV.fetch('PASS_EMAIL'),
       authentication:       'plain',
+      tls: true,
       enable_starttls_auto: true }
 
   config.paperclip_defaults = {
