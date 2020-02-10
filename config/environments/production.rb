@@ -86,8 +86,8 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'instaphoto-moffire.herokuapp.com/'}
 
   config.action_mailer.smtp_settings = {
-      address:              'smtp.rambler.ru',
-      port:                 465,
+      address:              'smtp.yandex.ru',
+      port:                 587,
       domain:               'instaphoto-moffire.herokuapp.com',
       user_name:            ENV.fetch('LOGIN_EMAIL'),
       password:             ENV.fetch('PASS_EMAIL'),
